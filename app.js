@@ -1,28 +1,16 @@
-import { incrementCart } from './cart.js';
+const searchInput = document.getElementById("searchInput");
+const productCards = document.querySelectorAll(".product-card");
 
-let totalItems = 0;
+searchInput.addEventListener("keyup", function () {
+  const searchValue = this.value.toLowerCase();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const search = document.getElementById('mainSearch');
-    const cards = document.querySelectorAll('.card');
-    const display = document.getElementById('cart-count');
+  productCards.forEach((card) => {
+    const productName = card.getAttribute("data-name").toLowerCase();
 
-    // Add to Cart Interaction
-    document.querySelectorAll('.add-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            totalItems = incrementCart(totalItems);
-            display.innerText = totalItems;
-            btn.innerText = "✓ Added";
-            setTimeout(() => btn.innerText = "Add to Cart", 800);
-        });
-    });
-
-    // Search Logic
-    search.addEventListener('input', (e) => {
-        const val = e.target.value.toLowerCase();
-        cards.forEach(card => {
-            const name = card.querySelector('h3').innerText.toLowerCase();
-            card.style.display = name.includes(val) ? 'block' : 'none';
-        });
-    });
+    if (productName.includes(searchValue)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
 });
