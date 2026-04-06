@@ -1,63 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickCart | Digital Store</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickCart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
+  <div class="page">
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>QuickCart</span>
+      </div>
 
-    <header class="navbar">
-        <div class="logo">🛒 QuickCart</div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Electronics</a>
-            <a href="#">Sports</a>
-            <a href="#">Cart</a>
-        </nav>
-        <div class="nav-search-container">
-            <input type="text" placeholder="Search products...">
-            <span id="cart-icon">🛒 <small id="cart-count">0</small></span>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search products..." />
         </div>
-    </header>
 
-    <main class="content-wrapper">
-        <section class="header-row">
-            <h1>All Products</h1>
-            <div class="inner-search">
-                <input type="text" id="mainSearch" placeholder="🔍 Search products...">
-            </div>
-        </section>
-
-        <div class="product-grid" id="productContainer">
-            <div class="card" data-name="product1">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Headphones">
-                <h3>Product1</h3>
-                <p class="price">$49.99</p>
-                <button class="add-btn">Add to Cart</button>
-            </div>
-            <div class="card" data-name="product2">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Watch">
-                <h3>Product2</h3>
-                <p class="price">$79.99</p>
-                <button class="add-btn">Add </button>
-            </div>
-            <div class="card" data-name="product3">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Shoe">
-                <h3>Product3</h3>
-                <p class="price">$29.99</p>
-                <button class="add-btn">Add to Cart</button>
-            </div>
-            <div class="card" data-name="product4">
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300" alt="Camera">
-                <h3>Product4</h3>
-                <p class="price">$99.99</p>
-                <button class="add-btn">Add to Cart</button>
-            </div>
+        <div class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">1</span>
         </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Shop Smart, Shop Fast</h1>
+        <p>Discover trendy gadgets, fashion, and accessories in one place.</p>
+        <button>Explore Now</button>
+      </div>
+    </section>
+
+    <main class="content">
+      <div class="section-head">
+        <h2>Featured Products</h2>
+
+        <div class="main-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search products..." />
+        </div>
+      </div>
+
+      <div class="products-row" id="productsRow">
+        <div class="product-card" data-name="Headphones">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones" />
+          <h3>Headphones</h3>
+          <p>$49.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Smart Watch">
+          <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400" alt="Smart Watch" />
+          <h3>Smart Watch</h3>
+          <p>$79.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="White Sneakers">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Sneakers" />
+          <h3>White Sneakers</h3>
+          <p>$29.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Camera">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400" alt="Camera" />
+          <h3>Camera</h3>
+          <p>$99.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Gaming Controller">
+          <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400" alt="Controller" />
+          <h3>Gaming Controller</h3>
+          <p>$39.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Sunglasses">
+          <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400" alt="Sunglasses" />
+          <h3>Sunglasses</h3>
+          <p>$59.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Luxury Watch">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Watch" />
+          <h3>Luxury Watch</h3>
+          <p>$199.99</p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Running Shoes">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Running Shoes" />
+          <h3>Running Shoes</h3>
+          <p>$89.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
     </main>
+  </div>
 
-    <script type="module" src="main.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
